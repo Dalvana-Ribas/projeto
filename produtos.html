@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/topnav.css">
+    <script src="js/topnav.js"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-element {
+            visibility: hidden;
+        }
+
+        .animate-element.show {
+            visibility: visible;
+            animation: fadeInUp 1s;
+        }
+    </style>
+    <script>
+        function showAnimations() {
+            const elements = document.querySelectorAll('.animate-element');
+            elements.forEach(element => {
+                element.classList.add('show');
+            });
+        }
+
+        window.addEventListener('load', showAnimations);
+    </script>
+    <title>Projeto Final JS</title>
+</head>
+<body>
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-12 p-3" style="background-color:#a3842c;">
+                <center><a><img src="img/logo.png"></a></center>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12" style="margin: 0; padding: 0;"> 
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="produtos.html" class="active">Produtos</a>                
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-sm-6 animate-element" style="background-color: #F7DA8D;">
+               <br><br> <center class="animate__animated animate__fadeInUp">Nossos produtos utilizados nos tratamentos são cuidadosamente selecionados, oferecendo o máximo em qualidade e eficácia. 
+                    Queremos que você se sinta mimado(a) e rejuvenescido(a) em cada momento da sua experiência conosco. </center>
+               <br><br><br><br><br> <center class="animate__animated animate__fadeInUp"><img src="img/produto4.png"></center> 
+                <div class="box">                    
+                </div>                       
+            </div>
+            <div class="col-sm-6 animate-element" style="background-color: #F7DA8D;">
+                <br><br><center class="animate__animated animate__fadeInUp">Além dos tratamentos revitalizantes, também oferecemos atividades relaxantes, como aulas de ioga, meditação e exercícios de respiração. 
+                    Essas práticas ajudarão a equilibrar sua mente e corpo, permitindo que você encontre um estado de calma interior.
+                    No nosso spa, a sua tranquilidade e satisfação são a nossa prioridade.</center>
+                <center class="animate__animated animate__fadeInUp"><img src="img/produto5.png"></center>                        
+            </div>    
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="row"> 
+            <div class="col-sm-12 p-3" style="background-color: #a3842c;">                
+            </div> 
+        </div>   
+    </div>
+    
+</body>
+</html>

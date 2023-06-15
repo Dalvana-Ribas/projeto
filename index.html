@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/topnav.css">
+    <style>
+        .animate-fade {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .animate-fade.show {
+            opacity: 1;
+        }
+
+        .animate-slide {
+            transform: translateY(100%);
+            transition: transform 1s ease-in;
+        }
+
+        .animate-slide.show {
+            transform: translateY(0%);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/topnav.js"></script>
+    <title>Projeto Final JS</title>
+</head>
+<body>
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-12 p-3" style="background-color:#a3842c;">
+                <center><a><img src="img/logo.png"></a></center>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12" style="margin: 0; padding: 0;"> 
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active">Home</a>
+                <a href="produtos.html">Produtos</a>                
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-sm-6 animate-slide" style="background-color: #F7DA8D ;">
+                <br><br><center>Bem-vindo(a) ao nosso tranquilo e rejuvenescedor spa. Aqui, proporcionamos um refúgio sereno onde você pode relaxar, renovar e revigorar seu corpo e mente.
+                    Ao entrar em nosso spa, você será recebido(a) por uma atmosfera tranquila e acolhedora, repleta de aromas suaves e uma música suave que envolverá seus sentidos. 
+                    Nossa equipe altamente qualificada de terapeutas estará pronta para cuidar de você com dedicação e profissionalismo.</center> 
+                    
+                <br><br><br><center><img src="img/produto1.png"></center>                 
+                <div class="box">                                        
+                </div>                
+            </div>
+            <div class="col-sm-6 animate-fade" style="background-color: #F7DA8D;">
+               <br><br><center>Nossos tratamentos são projetados para trazer equilíbrio e harmonia ao seu ser. De massagens terapêuticas a tratamentos faciais revitalizantes, 
+                    cada serviço é cuidadosamente planejado para proporcionar a máxima sensação de relaxamento e bem-estar.
+                    Deixe o estresse e as preocupações do mundo exterior para trás enquanto mergulha em um ambiente de tranquilidade. 
+                    Desfrute de nossos espaços serenos, como piscinas aquecidas, saunas aromáticas e banheiras de hidromassagem, onde você poderá descontrair completamente. </center>  
+                <br><br><center><img src="img/produto2.png"></center>                     
+            </div>    
+        </div>
+
+    </div>
+     <div class="container-fluid">
+        <div class="row"> 
+            <div class="col-sm-12 p-3" style="background-color: #a3842c;">               
+            </div> 
+        </div>   
+    </div>
+    
+    <script>
+        // Função para adicionar classes CSS que ativam as animações
+        function showAnimations() {
+            const slideElements = document.querySelectorAll('.animate-slide');
+            const fadeElements = document.querySelectorAll('.animate-fade');
+
+            slideElements.forEach(element => {
+                element.classList.add('show');
+            });
+
+            fadeElements.forEach(element => {
+                element.classList.add('show');
+            });
+        }
+
+            window.addEventListener('load', showAnimations);
+    </script>
+</body>
+</html>
